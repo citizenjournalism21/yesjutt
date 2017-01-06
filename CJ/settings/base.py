@@ -25,7 +25,7 @@ SECRET_KEY = 'tm$82vt3wf5w1z*i3gmdi&8#217d+_l%z^j8^+=#-uwo_d&917'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['evening-thicket-93628.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
