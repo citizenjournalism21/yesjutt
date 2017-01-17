@@ -13,27 +13,11 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-# from django.conf.urls import url
-from django.conf.urls import *
+from django.conf.urls import url
 from django.contrib import admin
 import core.views as coreviews
-from django.conf import settings
-
-# urlpatterns = [
-#     url(r'^admin/', admin.site.urls),
-#     url(r'^$', coreviews.SplashView.as_view()),
-# ]
-
- 
-admin.autodiscover()
 
 urlpatterns = [
-    # url(r'^$', include('myapp.cesar.urls')),
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/', admin.site.urls),
     url(r'^$', coreviews.SplashView.as_view()),
 ]
-
-if not settings.DEBUG:
-    urlpatterns += [
-        (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
-    ]
