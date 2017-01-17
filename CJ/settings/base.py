@@ -124,3 +124,5 @@ STATICFILES_DIRS = (
  )
 
 STATIC_ROOT = 'staticfiles'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
